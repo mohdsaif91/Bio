@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bio</title>
+    <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+    <link rel="stylesheet" href="text/css" href="fontcss.css" media="screen" />
+    <!-- <link rel="stylesheet" href="/main.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <div>
+            <h1>Hi there</h1>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 text-center">
+          <div class="col-sm-2"></div>
+          <img
+            class="image"
+            onmouseover="openDiv()"
+            onmouseout="closeDiv()"
+            src="myImg.jpeg"
+          />
+        </div>
+      </div>
+      <div class="row mt-3 text-center" id="openDiv" style="display: none;">
+        <div class="word"></div>
+      </div>
+      <div class="row mt-5 text-center">
+        <div class="col-2 col-sm-3"></div>
+        <div class="col-8 col-sm-7">
+          <h5>
+            I am <b>Mohd Saif Farooqui</b>, software Developer completed my
+            master degree in Information Technology. working as Software
+            developer in company. It my hobby and passion to develop website.
+            Learning, Implementing and Rectifying. Intrested In Freelancing
+          </h5>
+        </div>
+        <div class="col-4 col-md-4 col-sm-2"></div>
+        <div class="col-4 col-md-4 col-sm-4">
+          <div class="row mt-4">
+            <div class="col-12 col-sm-12 col-md-12 text-center">
+              <div>
+                <h5><b>Imprint</b>:</h5>
+                <h5>
+                  Mohd Saif Farooqui, Dharavi, Mumbai, India
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" id="textiOnMobile">
+        <div class="col-12 text-center" style="color: darkslategray;">
+          <h3>Websites which i have made or worked on:</h3>
+        </div>
+      </div>
+      <div class="row mt-1">
+        <div class="col-12 text-center">
+          <h5>
+            <a href="https://matrixpharmacy.herokuapp.com"
+              >matrixpharmacy 2019
+            </a>
+          </h5>
+          <h5>
+            <a href="https://github.com/mohdsaif91/Bio.git">
+              Expense Tracker 2019
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="row mt-2 text-center">
+        <div class="col-12"><h5>Phone:+91 9167605650</h5></div>
+      </div>
+      <div class="row mt-3 text-center">
+        <div class="col-12">
+          <h5>
+            <a href="mailto:saiffarooqui9505@gmail.com"
+              >saiffarooqui9505@gmail.com</a
+            >
+          </h5>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-12 col-12">
+          <a href="https://www.facebook.com/saif.farooqui.16"
+            ><i class="fa fa-facebook" aria-hidden="true"></i
+          ></a>
+          <a href="https://github.com/mohdsaif91"
+            ><i class="fa fa-github" aria-hidden="true"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/mohd-saif-farooqui-158a23124/"
+            ><i class="fa fa-linkedin" aria-hidden="true"></i
+          ></a>
+          <a class="fa fa-cv" href="https://stackoverflow.com/story/mohdsaif"
+            >CV</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javaScript">
+
+      function openDiv(){
+          document.getElementById("openDiv").style="display:block";
+      }
+      function closeDiv(){
+        document.getElementById("openDiv").style="display:none";
+      }
+    </script>
+    <script src="script.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
