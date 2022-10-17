@@ -128,3 +128,11 @@ ul li {
 .icon {
   margin-right: 8px;
 }
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}

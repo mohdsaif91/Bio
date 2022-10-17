@@ -1,16 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import myImage from "../img/myImg.jpeg";
 
+const words = [
+  "Take your business to next LEVEL",
+  "Increase your business presence",
+  "Be virtually present everywhere",
+  "Resonable Pricing",
+];
+
 function Profile() {
+  const [open, setOpen] = useState(false);
+  const [partText, setPartText] = useState("");
+
   const wordFunction = () => {
-    var words = [
-        "Take your business to next LEVEL",
-        "Increase your business presence",
-        "Be virtually present everywhere",
-        "Resonable Pricing",
-      ],
-      part,
+    let part,
       i = 0,
       offset = 0,
       len = words.length,
@@ -45,20 +49,18 @@ function Profile() {
           offset--;
         }
       }
-      document.getElementsByClassName("word").innerHTML = part;
+      setPartText(part);
+      console.log(part);
+      // document.querySelector("word").innerHTML = part;
     }, speed);
   };
+
+  console.log(open);
 
   useEffect(() => {
     wordFunction();
   }, []);
 
-  const openDiv = () => {
-    document.getElementById("openDiv").style = "display:block";
-  };
-  const closeDiv = () => {
-    document.getElementById("openDiv").style = "display:none";
-  };
   return (
     <div className="container">
       <div className="row mt-4">
@@ -71,18 +73,14 @@ function Profile() {
           <div className="col-sm-2"></div>
           <img
             className="image"
-            onmouseover={openDiv}
-            onmouseout={closeDiv}
+            onFocus={() => setOpen(true)}
+            onBlur={() => setOpen(false)}
             src={myImage}
           />
         </div>
       </div>
-      <div
-        className="row mt-3 text-center"
-        id="openDiv"
-        style={{ display: "none" }}
-      >
-        <div className="word"></div>
+      <div className={`row mt-3 text-center ${open ? "block" : "none"}`}>
+        <div className="word">{partText}</div>
       </div>
       <div className="row mt-5 text-center">
         <div className="col-2 col-sm-3"></div>
@@ -91,7 +89,7 @@ function Profile() {
             I am <b>Mohd Saif Farooqui</b>, software Developer completed my
             master degree in Information Technology. working as Software
             developer in company. It my hobby and passion to develop website.
-            Learning, Implementing and Rectifying. Intrested In Freelancing
+            Learning, Implementing and Rectifying.
           </h5>
         </div>
         <div className="col-4 col-md-4 col-sm-2"></div>
@@ -149,6 +147,16 @@ function Profile() {
           <h5>
             <a href="https://www.kinindustries.in/" target="_blank">
               Kin Industries 2022
+            </a>
+          </h5>
+          <h5>
+            <a href="https://sugarlogger.com/" target="_blank">
+              Suggar Logger 2022
+            </a>
+          </h5>
+          <h5>
+            <a href="http://multiplyrr.com/" target="_blank">
+              Multiplyrr 2022
             </a>
           </h5>
         </div>
