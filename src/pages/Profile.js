@@ -168,7 +168,9 @@ function Profile() {
       </div>
       <div className="row mt-2 text-center">
         <div className="col-12">
-          <h5>Phone:+91 9167605650</h5>
+          <a href="tel:+91 9167605650">
+            <h5>Phone:+91 9167605650</h5>
+          </a>
         </div>
       </div>
       <div className="row mt-3 text-center">
